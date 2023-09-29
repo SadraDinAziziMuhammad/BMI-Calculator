@@ -6,52 +6,42 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <h1><span style="color: brown">Check Your BMI</span></h1>
-    <h3>Input height and weight to check your BMI</h3>
-    <form action="">
-        <label for="name" class="required">Input your height (CM)</label>
-        <br>
-        <input type="text" id="height" name="height" placeholder="170" required />
-        <br><br>
-        <label for="email" class="required">Input your weight (KG)</label>
-        <br>
-        <input type="text" id="weight" name="weight" placeholder="65" required />
-      <br /><br />
-      <input type="submit" value="Submit" id="submit" name="submit" />
-    </form>
+    <div class="container">
+      <h1>Kalkulator BMI</h1>
+      <p>Masukkan Berat Badan (KG):</p>
+      <input type="text" id="weightInput" placeholder="Masukkan berat badan dalam KG">
+      <p>Masukkan Tinggi Badan (CM):</p>
+      <input type="text" id="heightInput" placeholder="Masukkan tinggi badan dalam CM">
+      <button onclick="calculateBMI()">Hitung BMI</button>
+      <p id="result"></p>
+  </div>
 
     <!-- Style Start -->
     <style>
-      body {
-        padding-top: 20px;
-        text-align: center;
-        background-color: #F9F3CC;
-        font-family: Georgia, "Times New Roman", Times, serif;
-      }
+.container {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-      h3 {
-        opacity: 70%;
-      }
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
 
-      input[type="submit"] {
-        background-color: #007bff; 
-        color: #fff; 
-        padding: 10px 20px; 
-        border: none; 
-        border-radius: 5px; 
-        cursor: pointer; 
-        font-size: 16px; 
-        font-weight: bold; 
-      }
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
-      input[type="submit"]:hover {
-        background-color: #0056b3; 
-      }
+button:hover {
+    background-color: #0056b3;
+}
 
-      label.required::after {
-        content: " *";
-        color: red;
-      }
     </style>
     <!-- Style End -->
     <script src="script.js"></script>
